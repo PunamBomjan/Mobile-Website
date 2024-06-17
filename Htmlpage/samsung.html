@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_Project</title>
+    <link rel="stylesheet" href="../Assets/Css_Code/Home_Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="homepage.js" async></script>
+</head>
+<body >
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fa fa-bars"></label>
+        <div class="logo">
+            <img src="../Assets/Images/homepagelogoooo.png" alt="Check internet connection" style="height: auto;width:130px;">
+        </div>
+        <nav class="navbar">
+
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html" style="color: rgb(223, 81, 223);">Gallery</a>
+                    <a href="product.html">Product</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="icon">
+            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a href="#" id="loginIcon">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i> 
+            </a>      
+        </div>
+    </header>
+    <div class="login" id="loginForm">
+        <h1>Login Form</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter your username" id="a">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your password" id="b">
+    
+            <div class="check">
+                <input type="checkbox" name="remember">
+                <label for="remeber">Remember</label>
+            </div>
+            <input type="submit" value="Login" style="margin-top: 4px;" onclick="return validateForm(); ">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('a').value;
+            if (username == "") {
+                alert("Please enter your username....");
+            } else {
+                if (username.length > 15) {
+                    alert("Use a username containing less than 15 letters...");
+                }
+            }
+    
+            var password = document.getElementById('b').value;
+            if (password == "") {
+                alert("Please enter your password...");
+            } else {
+                if (password.length < 7 || password.length > 13) {
+                    alert("Password must contain more than 7 characters and less than 13 characters...");
+                }
+            }
+        }
+        window.onload = function ()
+          {
+        document.getElementById('a').focus();
+          };
+          function toggleLoginForm() {
+var loginForm = document.getElementById("loginForm");
+if (loginForm.style.display === "none" || loginForm.style.display === "") {
+    loginForm.style.display = "block";
+} else {
+    loginForm.style.display = "none";
+}
+}
+document.getElementById("loginIcon").addEventListener("click", toggleLoginForm);
+    </script>
+
+<section id="product" class="product">
+    <section class="back">
+        <h2>Photo Gallery 📷</h2>
+        <p>Collection of Brand New Phones</p>
+    </section>
+    <nav class="bar">
+        <ul>
+            <li><a href="gallery.html" >All</a></li>
+            <li><a href="apple.html" >Apple</a></li>
+            <li><a href="samsung.html"style="background-color: hsl(0, 0%, 10%);">Samsung</a></li>
+            <li><a href="redmi.html">Redmi</a></li>
+            <li><a href="poco.html">POCO</a></li>
+
+        </ul>
+    </nav>
+<!--Samsung-->
+<div class="img-gallery">
+    <a target="_blank" href="../Assets/Images/ssA34.jpg" >
+<img src="../Assets/Images/ssA34.jpg" alt="Samsung-A34" ></img>
+    </a>
+    <div class="img_title">Samsung-A34</div>
+</div>
+ <div class="img-gallery">
+        <a target="_blank" href="../Assets/Images/ssXcover.jpg" >
+<img src="../Assets/Images/ssXcover.jpg" alt="Samsung-XCover" ></img>
+        </a>
+    <div class="img_title">Samsung-XCOVER</div>
+</div>
+<div class="img-gallery">
+            <a target="_blank" href="../Assets/Images/ss24.jpg" >
+    <img src="../Assets/Images/ss24.jpg" alt="Samsung-24" ></img>
+            </a>
+    <div class="img_title">Samsung-24</div>
+</div>
+<div class="img-gallery">
+                <a target="_blank" href="../Assets/Images/ssA15.jpg" >
+    <img src="../Assets/Images/ssA15.jpg" alt="Samsung-A15" ></img>
+                </a>
+    <div class="img_title">Samsung-A15</div>
+</div>
+   <main id="#description">
+    <h3 style="background-color:rgb(223, 81, 223); text-align: center; font-size: 1.5vw; margin-bottom: 10px;">This is the Gallery Page</h3>
+    <p>Welcome to <b>11:11</b> A place to find the best electronic
+         products for every taste and occasion.11:11 is the home to thousands of 
+         electronic smartphone products that you can possibly imagine-from trending devices. 
+         Just put in what you‘re looking for, and you‘ll be sure to find it here.
+          What’s more? We are bringing the products at irresistible prices, a hassle-free return policy,
+           and quick delivery with free shipping on orders above Rs. 10,000. 
+           So, what are you waiting for? Drag your cursor to the search bar, enter the product,
+            and place your order at the cheapest price in town.</p>
+</main>
+</section>
+<div class="footer">
+<div class="box-container">
+    <div class="box">
+        <h3>Contact Us</h3>
+        <a>Email:ELevenstore678@gmail.com </a>
+        <a>Phone:+977 9867495572</a>
+        <a>Address:Kathmandu,Putalisadak</a>
+        <a>Payment:E-sewa,Khalti,Paypal</a>
+    </div>
+<div class="box">
+    <h3>Quick Links</h3>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="product.html">Product</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+<div class="box-follow">
+    <h3>Follow US</h3>
+    <div>
+    <a href="facebook.html" class="facebook" ><i class="fa fa-facebook-official" aria-hidden="true" style="color: #316ff6;"></i></a >
+        <a href="twitter.html" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true" style="color: #1DA1F2;"></i></a>
+        <a href="Instagram.html" class="Instagram" ><i class="fa fa-instagram" aria-hidden="true" style="color:#C13584;"></i></a>
+        <a href="Youtube.html" class="Youtube" ><i class="fa fa-youtube-play" aria-hidden="true" style="color:#FF0000;"></i></a>
+    </div>
+</div>
+</div>
+<div class="bottom">
+    <p>&copy;2019 11:11 Star Store. All rights reserved </p>
+</div>
+</div>
+</body>
+</html>
